@@ -1,0 +1,9 @@
+{
+    "settings": {
+        "title": "Settings"
+    },
+    "about": {
+        "title": "About",
+        "aboutThisApp": "About this application"
+    }
+}
