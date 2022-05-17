@@ -4,8 +4,10 @@
 import 'dart:async';
 
 import 'package:bloc_concurrency/bloc_concurrency.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:miniprogui/models/_enums.dart';
 import 'package:miniprogui/models/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -43,6 +45,8 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
 
     return Settings(
       languageCode: prefs.getString('languageCode') ?? defaultSettings.languageCode,
+      appTheme: AppTheme.values.firstWhereOrNull((v) => v.key == prefs.getInt('appTheme')) ??
+          defaultSettings.appTheme,
       settingsUpgradedToBuild: prefs.getInt('settingsUpgradedToBuild') ?? defaultSettings.settingsUpgradedToBuild,
       settingsUpgradedToVersion:
           prefs.getString('settingsUpgradedToVersion') ?? defaultSettings.settingsUpgradedToVersion,
@@ -57,6 +61,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     } else {
       await prefs.remove('languageCode');
     }
+    await prefs.setInt('appTheme', settings.appTheme.key);
     await prefs.setInt('firstStartBuild', settings.settingsUpgradedToBuild);
     await prefs.setString('firstStartVersion', settings.settingsUpgradedToVersion);
   }

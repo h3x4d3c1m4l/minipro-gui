@@ -1,6 +1,33 @@
 {
+    "programming": {
+        "title": "Programming"
+    },
+    "icTesting": {
+        "title": "IC testing"
+    },
     "settings": {
-        "title": "Settings"
+        "title": "Settings",
+        "settings": {
+            "language": {
+                "title": "Language",
+                "subtitle": "App display language",
+                "options": {
+                    "default": "Default",
+                    "english": "English",
+                    "dutch": "Dutch"
+                }
+            },
+            "theme": {
+                "title": "App theme",
+                "subtitle": "Change app colors",
+                "options": {
+                    "default": "Default",
+                    "light": "Light",
+                    "dark": "Dark"
+                }
+            }
+        },
+        "changes_will_be_saved_automatically": "Changes will be saved automatically"
     },
     "about": {
         "title": "About",

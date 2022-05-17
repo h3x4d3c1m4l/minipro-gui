@@ -1,6 +1,33 @@
 {
+    "programming": {
+        "title": "Programmeren"
+    },
+    "icTesting": {
+        "title": "ICs testen"
+    },
     "settings": {
-        "title": "Instellingen"
+        "title": "Instellingen",
+        "settings": {
+            "language": {
+                "title": "Taal",
+                "subtitle": "App weergavetaal",
+                "options": {
+                    "default": "Standaard",
+                    "english": "Engels",
+                    "dutch": "Nederlands"
+                }
+            },
+            "theme": {
+                "title": "App thema",
+                "subtitle": "Pas app kleuren aan",
+                "options": {
+                    "default": "Standaard",
+                    "light": "Licht",
+                    "dark": "Donker"
+                }
+            }
+        },
+        "changes_will_be_saved_automatically": "Wijzigingen worden automatisch opgeslagen"
     },
     "about": {
         "title": "Over",

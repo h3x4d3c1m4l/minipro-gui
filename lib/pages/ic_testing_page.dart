@@ -3,14 +3,14 @@
 
 import 'package:flutter/material.dart';
 
-class LogicTestingPage extends StatefulWidget {
-  const LogicTestingPage({ Key? key }) : super(key: key);
+class IcTestingPage extends StatefulWidget {
+  const IcTestingPage({ Key? key }) : super(key: key);
 
   @override
-  _LogicTestingPageState createState() => _LogicTestingPageState();
+  _IcTestingPageState createState() => _IcTestingPageState();
 }
 
-class _LogicTestingPageState extends State<LogicTestingPage> {
+class _IcTestingPageState extends State<IcTestingPage> {
   @override
   Widget build(BuildContext context) {
     return Container();

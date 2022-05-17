@@ -1,7 +1,11 @@
 // Copyright 2022 Sander in 't Hout.
 // Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
 
-export 'about_page.dart';
-export 'ic_testing_page.dart';
-export 'programming_page.dart';
-export 'settings_page.dart';
+enum AppTheme {
+  byDevice(0),
+  light(1),
+  dark(2);
+
+  final int key;
+  const AppTheme(this.key);
+}

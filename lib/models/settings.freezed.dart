@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Settings {
   String? get languageCode => throw _privateConstructorUsedError;
+  AppTheme get appTheme => throw _privateConstructorUsedError;
   int get settingsUpgradedToBuild => throw _privateConstructorUsedError;
   String get settingsUpgradedToVersion => throw _privateConstructorUsedError;
 
@@ -31,6 +32,7 @@ abstract class $SettingsCopyWith<$Res> {
       _$SettingsCopyWithImpl<$Res>;
   $Res call(
       {String? languageCode,
+      AppTheme appTheme,
       int settingsUpgradedToBuild,
       String settingsUpgradedToVersion});
 }
@@ -46,6 +48,7 @@ class _$SettingsCopyWithImpl<$Res> implements $SettingsCopyWith<$Res> {
   @override
   $Res call({
     Object? languageCode = freezed,
+    Object? appTheme = freezed,
     Object? settingsUpgradedToBuild = freezed,
     Object? settingsUpgradedToVersion = freezed,
   }) {
@@ -54,6 +57,10 @@ class _$SettingsCopyWithImpl<$Res> implements $SettingsCopyWith<$Res> {
           ? _value.languageCode
           : languageCode // ignore: cast_nullable_to_non_nullable
               as String?,
+      appTheme: appTheme == freezed
+          ? _value.appTheme
+          : appTheme // ignore: cast_nullable_to_non_nullable
+              as AppTheme,
       settingsUpgradedToBuild: settingsUpgradedToBuild == freezed
           ? _value.settingsUpgradedToBuild
           : settingsUpgradedToBuild // ignore: cast_nullable_to_non_nullable
@@ -74,6 +81,7 @@ abstract class _$$_SettingsCopyWith<$Res> implements $SettingsCopyWith<$Res> {
   @override
   $Res call(
       {String? languageCode,
+      AppTheme appTheme,
       int settingsUpgradedToBuild,
       String settingsUpgradedToVersion});
 }
@@ -91,6 +99,7 @@ class __$$_SettingsCopyWithImpl<$Res> extends _$SettingsCopyWithImpl<$Res>
   @override
   $Res call({
     Object? languageCode = freezed,
+    Object? appTheme = freezed,
     Object? settingsUpgradedToBuild = freezed,
     Object? settingsUpgradedToVersion = freezed,
   }) {
@@ -99,6 +108,10 @@ class __$$_SettingsCopyWithImpl<$Res> extends _$SettingsCopyWithImpl<$Res>
           ? _value.languageCode
           : languageCode // ignore: cast_nullable_to_non_nullable
               as String?,
+      appTheme: appTheme == freezed
+          ? _value.appTheme
+          : appTheme // ignore: cast_nullable_to_non_nullable
+              as AppTheme,
       settingsUpgradedToBuild: settingsUpgradedToBuild == freezed
           ? _value.settingsUpgradedToBuild
           : settingsUpgradedToBuild // ignore: cast_nullable_to_non_nullable
@@ -116,6 +129,7 @@ class __$$_SettingsCopyWithImpl<$Res> extends _$SettingsCopyWithImpl<$Res>
 class _$_Settings extends _Settings {
   const _$_Settings(
       {this.languageCode,
+      required this.appTheme,
       required this.settingsUpgradedToBuild,
       required this.settingsUpgradedToVersion})
       : super._();
@@ -123,13 +137,15 @@ class _$_Settings extends _Settings {
   @override
   final String? languageCode;
   @override
+  final AppTheme appTheme;
+  @override
   final int settingsUpgradedToBuild;
   @override
   final String settingsUpgradedToVersion;
 
   @override
   String toString() {
-    return 'Settings(languageCode: $languageCode, settingsUpgradedToBuild: $settingsUpgradedToBuild, settingsUpgradedToVersion: $settingsUpgradedToVersion)';
+    return 'Settings(languageCode: $languageCode, appTheme: $appTheme, settingsUpgradedToBuild: $settingsUpgradedToBuild, settingsUpgradedToVersion: $settingsUpgradedToVersion)';
   }
 
   @override
@@ -139,6 +155,7 @@ class _$_Settings extends _Settings {
             other is _$_Settings &&
             const DeepCollectionEquality()
                 .equals(other.languageCode, languageCode) &&
+            const DeepCollectionEquality().equals(other.appTheme, appTheme) &&
             const DeepCollectionEquality().equals(
                 other.settingsUpgradedToBuild, settingsUpgradedToBuild) &&
             const DeepCollectionEquality().equals(
@@ -149,6 +166,7 @@ class _$_Settings extends _Settings {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(languageCode),
+      const DeepCollectionEquality().hash(appTheme),
       const DeepCollectionEquality().hash(settingsUpgradedToBuild),
       const DeepCollectionEquality().hash(settingsUpgradedToVersion));
 
@@ -161,12 +179,15 @@ class _$_Settings extends _Settings {
 abstract class _Settings extends Settings {
   const factory _Settings(
       {final String? languageCode,
+      required final AppTheme appTheme,
       required final int settingsUpgradedToBuild,
       required final String settingsUpgradedToVersion}) = _$_Settings;
   const _Settings._() : super._();
 
   @override
   String? get languageCode => throw _privateConstructorUsedError;
+  @override
+  AppTheme get appTheme => throw _privateConstructorUsedError;
   @override
   int get settingsUpgradedToBuild => throw _privateConstructorUsedError;
   @override

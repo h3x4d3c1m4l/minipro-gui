@@ -9,8 +9,20 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScaffoldPage(
-      content: Text('about.aboutThisApp'.tr()),
+    return ScaffoldPage.withPadding(
+      content: Center(
+        child: SingleChildScrollView(
+          child: SizedBox(
+            width: double.infinity, // expand horizontally
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('about.title'.tr()),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
